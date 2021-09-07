@@ -6,6 +6,7 @@
 ---
 
 ### Project Description
+
 Using AI and Machine Learning AI Model has to recognise specific places on the production hall map. 
 Program must perform a pipeline of operations:
 1. Clustering
@@ -22,7 +23,7 @@ The whole project is also intended to study and review the available machine lea
 
 ---
 
-### Data description
+### Data details and description
 
 1. Train and test data stores information about employees moving inside the production hall. 
 Data file stores information about their ID, coordinates (x and y), measurement time and other (unnecessary for description) data.
@@ -46,14 +47,27 @@ be able to read files in both these formats.
 
 6. Train data shape is always (*n*, 3), which *n* is number of data rows.
 
-
----
-
-### Data details and dependencies
-
 ---
 
 ### Clustering
+
+During clustering process 5 algorithms were used:
+1. Agglomerative Clustering
+2. DBScan
+3. KMeans
+4. OPTICS
+5. Spectral clustering
+
+The main problem using all algorithms was to select the appropriate number of clusters.
+The more clusters there were, the smaller the mean square error of the entire population was, but it did not provide a satisfactory solution.
+The sum of mean square errors resembled a hyperbola like f(x) = 1/x (with an asymptote at infinity equal to 0 and with positive values for x in range (0, +inf)).
+
+Considering that I chose the number of clusters "by eye" that looked most likely - it was 6.
+After tuning the parameters, not every algorithm could cope with proper clustering. 
+***Agglomerative Clustering***, ***KMeans*** and ***Spectral Clustereing*** has worked the best.
+The results of which are presented below.
+
+![best_clusterizers](img/best_clusterizers.png)
 
 ---
 
@@ -62,6 +76,10 @@ be able to read files in both these formats.
 ---
 
 ### Regression
+
+---
+
+### Knowledge and skills acquired
 
 ---
 
