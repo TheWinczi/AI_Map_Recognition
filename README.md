@@ -51,7 +51,7 @@ be able to read files in both these formats.
 
 ### Clustering
 
-During clustering process 5 algorithms were used:
+During clustering process **5** different algorithms were used:
 1. Agglomerative Clustering
 2. DBScan
 3. KMeans
@@ -72,6 +72,24 @@ The results of which are presented below.
 ---
 
 ### Classification
+
+During classification all labels of data were taken from the best clustering algorithm - ***Agglomerative Clustering***. 
+
+During classification process **8** different algorithms were used:
+1. Decision Tree
+2. K-Nearest Neighbors
+3. Logistic Regression
+4. Multilayer Perceptron
+5. Random Forest
+6. SVM
+7. Team Classification (team of classifiers)
+8. Deep Neural Network (tensorflow)
+
+All algorithms parameters were tuned using Grid Search method (which allows to automatically choices of params).
+For all algorithms result chart of decision regions was created.
+
+![classifiers_comparison](img/classifiers_comparison.png)
+
 
 ---
 
