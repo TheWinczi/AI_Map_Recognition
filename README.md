@@ -138,6 +138,22 @@ and that the map recognition **"was done very well"** 😃.
 
 ## Regression
 
+To my own study I have programmed regression process. As described in [Data details and description](#data-details-and-description)
+input data stores measurement time of each measurement. Therefore, it is possible to calculate how long it took to move from one point to another. 
+As a result, we can try to reproduce the time curve needed to change the coordinates depending on the position (train a model).
+
+During regression process **4** different algorithms were used:
+1. Decision Tree
+2. K-Nearest Neighbors
+3. SVM
+4. Neural Network (tensorflow)
+
+An example of the Models approximations:
+![regression_example](img/regression_example.png)
+
+As seen in the graphs above, the learned models are much less prone to drastic changes in value, which may be a positive aspect of them. 
+Thanks to the approximations created, it is possible to control whether a given movement from point A to point B is in any way suspicious.
+
 ---
 
 ## Knowledge and skills acquired
