@@ -47,6 +47,9 @@ be able to read files in both these formats.
 
 6. Train data shape is always (*n*, 3), which *n* is number of data rows.
 
+All points for a given ID (after standardization) were shown on the chart:
+![all_points](img/all_points.png)
+
 ---
 
 ### Clustering
