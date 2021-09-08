@@ -5,7 +5,7 @@
 
 ---
 
-### Project Description
+## Project Description
 
 Using AI and Machine Learning AI Model has to recognise specific places on the production hall map. 
 Program must perform a pipeline of operations:
@@ -23,7 +23,7 @@ The whole project is also intended to study and review the available machine lea
 
 ---
 
-### Data details and description
+## Data details and description
 
 1. Train and test data stores information about employees moving inside the production hall. 
 Data file stores information about their ID, coordinates (x and y), measurement time and other (unnecessary for description) data.
@@ -52,7 +52,7 @@ All points for a given ID (after standardization) were shown on the chart:
 
 ---
 
-### Clustering
+## Clustering
 
 During clustering process **5** different algorithms were used:
 1. Agglomerative Clustering
@@ -74,7 +74,7 @@ The results of which are presented below.
 
 ---
 
-### Classification
+## Classification
 
 During classification all labels of data were taken from the best clustering algorithm - ***Agglomerative Clustering***. 
 
@@ -93,22 +93,62 @@ For all algorithms result chart of decision regions was created.
 
 ![classifiers_comparison](img/classifiers_comparison.png)
 
+### Team Classification
+
++ Parameters of each classifier has been tuned using Grid Search.
++ All classifiers had the same voting weights.
++ VotingClassifier class was used to create a team classifier.
+
+To create Team Classifier model 3 classifiers has been used:
+1. KNN
+2. SVM
+3. Decision Tree
+
+
+### Deep Neural Network
+
++ To create Deep Neural Network model ***Tensorflow*** library has been used. 
++ For my own study I experimented with possible optimizers of compiler and layer settings
+  - layers count,
+  - units number,
+  - activation functions.
+    
+
+The best results has given by model:
+
+|    Model   | Total params | Trainable params | Non-trainable params |
+| :--------: | :----------: | :--------------: | :------------------: |
+| sequential |    1,301     |      1,301       |          0           |
+
+
+| Layer (type)           |     Output Shape       |       Param #          |
+| :--------------------: | :--------------------: | :--------------------: |
+| dense (Dense)          |       (None, 10)       |         30             |
+| dense_1 (Dense)        |      (None, 15)        |        165             |
+| dense_2 (Dense)        |      (None, 50)        |        800             |
+| dense_3 (Dense)        |      (None, 6)         |        306             |
+
+### Classification Results
+
+I talked with person who know how production hall layout looks like and this person said that
+the hall layout was best mapped by ***Decision Tree***, ***Random Forest*** and ***KNN*** 
+and that the map recognition **"was done very well"** 😃.
 
 ---
 
-### Regression
+## Regression
 
 ---
 
-### Knowledge and skills acquired
+## Knowledge and skills acquired
 
 ---
 
-### Summary and general thoughts
+## Summary and general thoughts
 
 ---
 
-### Technology used
+## Technology used
 + Python 3.9.5
     + scikit-learn
     + pandas
