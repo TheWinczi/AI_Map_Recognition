@@ -165,18 +165,29 @@ Additionally, I have spent a lot of time learning to read scikit-learn and tenso
 What exactly have I learned:
 1. How to create more readable and helpful python documentation - with examples, arguments and returns description, links and  'SeeAlso' section.
 2. How to use appropriate models of clustering, classification and regression depending on the problem.
-3. How to use Tensorflow library to create Dense Deep Neural Networks solving much more difficult problems.
+3. How to use tensorflow library to create Dense Deep Neural Networks solving much more difficult problems.
 4. How to write more universal functions.
 5. How to better to present data in graphs.
 6. How to better to use programs that are useful for the programmer's work:
    + Slack,
    + GitHub,
-   + YouTrack,
-
+   + YouTrack.
+7. How to better process python data using the pandas library.
 
 ---
 
 ## Summary and general thoughts
+
+1. It was very interesting project. Especially it was my first more commercially project.
+2. The biggest fun I have had testing different parameters, layers count, activation functions of Models. 
+3. The task to do was quite difficult, especially since the data was real, not made with machine learning in mind.
+4. I have experienced commercial software development to some extent.
+
+
+### Programming thoughts
+1. I do like how I created packages - "for_all.py" file used all programmed Machine Learning functions and provided 
+   functions that the user did not have to worry about used methods. 
+2. I do like division all project functions into packages.
 
 ---
 
