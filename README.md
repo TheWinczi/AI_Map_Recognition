@@ -158,6 +158,22 @@ Thanks to the approximations created, it is possible to control whether a given 
 
 ## Knowledge and skills acquired
 
+This project was my ```Professional Holiday Practice 2021``` so I have spent much more time to study how to write better code which will be easy to understand by others.
+
+Additionally, I have spent a lot of time learning to read scikit-learn and tensorflow documentation, testing different configurations of Models. 
+
+What exactly have I learned:
+1. How to create more readable and helpful python documentation - with examples, arguments and returns description, links and  'SeeAlso' section.
+2. How to use appropriate models of clustering, classification and regression depending on the problem.
+3. How to use Tensorflow library to create Dense Deep Neural Networks solving much more difficult problems.
+4. How to write more universal functions.
+5. How to better to present data in graphs.
+6. How to better to use programs that are useful for the programmer's work:
+   + Slack,
+   + GitHub,
+   + YouTrack,
+
+
 ---
 
 ## Summary and general thoughts
