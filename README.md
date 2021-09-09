@@ -16,10 +16,12 @@ Program must perform a pipeline of operations:
 Thanks to clustering Machine Learning algorithms can learn how the specific places on the production hall
 are placed on the map.
 
-After Classification AI Model learn and best reflect the time spent by an employee in a 
-given area (see the description of the input data).
+Using clustered data AI Classification Model can learn specific areas bounds.
 
-The whole project is also intended to study and review the available machine learning algorithms.
+After Classification AI Model can learn and reflect the time spent by an employee in a 
+given area (see [Data details and description](#data-details-and-description)).
+
+The whole project is also intended to study and review the available machine learning algorithms, machine learning libraries.
 
 ---
 
@@ -35,7 +37,7 @@ be able to read files in both these formats.
    
 
 3. Data is truly used to analyze employee movements. They are not made up or designed only for machine learning, 
-   which makes it difficult to use them for this purpose
+   which makes it difficult to use them for this purpose.
    
 
 4. The data consists of slightly more than 28,000 records
@@ -45,9 +47,9 @@ be able to read files in both these formats.
 5. Test data represents 20% of the data and training data 80%.
    
 
-6. Train data shape is always (*n*, 3), which *n* is number of data rows.
+6. Train and test data have reduced dimensionality to shape (*n*, 3).
 
-All points for a given ID (after standardization) were shown on the chart:
+All points for a given employee (after standardization) were shown on the chart:
 ![all_points](img/all_points.png)
 
 ---
@@ -63,12 +65,12 @@ During clustering process **5** different algorithms were used:
 
 The main problem using all algorithms was to select the appropriate number of clusters.
 The more clusters there were, the smaller the mean square error of the entire population was, but it did not provide a satisfactory solution.
-The sum of mean square errors resembled a hyperbola like f(x) = 1/x (with an asymptote at infinity equal to 0 and with positive values for x in range (0, +inf)).
+The sum of mean square errors resembled a hyperbola like f(x) = 1/x (for x in range (0, +inf)).
 
 Considering that I chose the number of clusters "by eye" that looked most likely - it was 6.
 After tuning the parameters, not every algorithm could cope with proper clustering. 
 ***Agglomerative Clustering***, ***KMeans*** and ***Spectral Clustereing*** has worked the best.
-The results of which are presented below.
+The results of which are presented and compared with others below.
 
 ![best_clusterizers](img/best_clusterizers.png)
 
@@ -89,7 +91,7 @@ During classification process **8** different algorithms were used:
 8. Deep Neural Network (tensorflow)
 
 All algorithms parameters were tuned using Grid Search method (which allows to automatically choices of params).
-For all algorithms result chart of decision regions was created.
+For all algorithms result chart of decision regions was created and compared on chart below.
 
 ![classifiers_comparison](img/classifiers_comparison.png)
 
@@ -116,17 +118,16 @@ To create Team Classifier model 3 classifiers has been used:
 
 The best results has given by model:
 
-|    Model   | Total params | Trainable params | Non-trainable params |
-| :--------: | :----------: | :--------------: | :------------------: |
-| sequential |    1,301     |      1,301       |          0           |
-
-
 | Layer (type)           |     Output Shape       |       Param #          |
 | :--------------------: | :--------------------: | :--------------------: |
 | dense (Dense)          |       (None, 10)       |         30             |
 | dense_1 (Dense)        |      (None, 15)        |        165             |
 | dense_2 (Dense)        |      (None, 50)        |        800             |
 | dense_3 (Dense)        |      (None, 6)         |        306             |
+
+|    Model   | Total params | Trainable params | Non-trainable params |
+| :--------: | :----------: | :--------------: | :------------------: |
+| sequential |    1,301     |      1,301       |          0           |
 
 ### Classification Results
 
@@ -140,7 +141,7 @@ and that the map recognition **"was done very well"** 😃.
 
 To my own study I have programmed regression process. As described in [Data details and description](#data-details-and-description)
 input data stores measurement time of each measurement. Therefore, it is possible to calculate how long it took to move from one point to another. 
-As a result, we can try to reproduce the time curve needed to change the coordinates depending on the position (train a model).
+As a result, it is possible to reproduce the time curve needed to change the coordinates depending on the position (train a model).
 
 During regression process **4** different algorithms were used:
 1. Decision Tree
@@ -158,9 +159,11 @@ Thanks to the approximations created, it is possible to control whether a given 
 
 ## Knowledge and skills acquired
 
-This project was my ```Professional Holiday Practice 2021``` so I have spent much more time to study how to write better code which will be easy to understand by others.
+This project was my ```Professional Holiday Practice 2021``` so I have spent much more time to study 
+how to write better code which will be easy to understand by others.
 
-Additionally, I have spent a lot of time learning to read scikit-learn and tensorflow documentation, testing different configurations of Models. 
+Additionally, I have spent a lot of time learning to read scikit-learn and tensorflow documentation, 
+testing different configurations of Models. 
 
 What exactly have I learned:
 1. How to create more readable and helpful python documentation - with examples, arguments and returns description, links and  'SeeAlso' section.
@@ -183,11 +186,11 @@ What exactly have I learned:
 3. The task to do was quite difficult, especially since the data was real, not made with machine learning in mind.
 4. I have experienced commercial software development to some extent.
 
-
 ### Programming thoughts
 1. I do like how I created packages - "for_all.py" file used all programmed Machine Learning functions and provided 
    functions that the user did not have to worry about used methods. 
 2. I do like division all project functions into packages.
+3. Functions documentation makes it easier to go back to writing code or understand the idea behind a specific function.
 
 ---
 
